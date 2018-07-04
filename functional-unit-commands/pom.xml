@@ -36,26 +36,15 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		<!-- Redmic -->
 
 		<!-- Añadir dependencia de la librería de la unidad funcional  -->
 
-		<!---->
+		<!-- REDMIC -->
 		<dependency>
 			<groupId>es.redmic.lib</groupId>
 			<artifactId>commands-lib</artifactId>
 			<version>${redmic.commands-lib.version}</version>
 		</dependency>
-
-		<!-- tests -->
-		<dependency>
-			<groupId>es.redmic.lib</groupId>
-			<artifactId>test-utils</artifactId>
-			<version>${redmic.test-utils.version}</version>
-			<scope>test</scope>
-		</dependency>
-		
 	</dependencies>
 	<build>
 		<plugins>

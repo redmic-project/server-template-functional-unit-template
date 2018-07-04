@@ -73,6 +73,13 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>es.redmic.lib</groupId>
+			<artifactId>test-utils</artifactId>
+			<version>${redmic.test-utils.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<distributionManagement>
 		<repository>

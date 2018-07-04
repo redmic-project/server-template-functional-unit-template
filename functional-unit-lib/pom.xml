@@ -13,7 +13,12 @@
 	<name>functional-unit-lib</name>
 
 	<dependencies>
-
-
+		<!-- REDMIC -->
+		<dependency>
+			<groupId>es.redmic.lib</groupId>
+			<artifactId>broker-lib</artifactId>
+			<version>${redmic.broker-lib.version}</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 </project>
