@@ -4,15 +4,15 @@
 
 	<parent>
 		<groupId>es.redmic</groupId>
-		<artifactId>functional-unit</artifactId>
+		<artifactId>redmic</artifactId>
 		<version>x.y.z</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>functional-unit-commands</artifactId>
+	<artifactId>template-view</artifactId>
 	<packaging>jar</packaging>
-	<name>functional-unit commands</name>
-	<description>Functional-unit commands microservice</description>
+	<name>template view</name>
+	<description>Template view microservice</description>
 
 	<dependencies>
 
@@ -36,14 +36,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-		<!-- Añadir dependencia de la librería de la unidad funcional  -->
-
-		<!-- REDMIC -->
+		
+		<!-- Redmic -->
 		<dependency>
 			<groupId>es.redmic.lib</groupId>
-			<artifactId>commands-lib</artifactId>
-			<version>${redmic.commands-lib.version}</version>
+			<artifactId>view-lib</artifactId>
+			<version>${redmic.view-lib.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -58,7 +56,7 @@
 						</goals>
 						<configuration>
 							<executable>true</executable>
-							<finalName>functional-unit-commands</finalName>
+							<finalName>template-view</finalName>
 							<outputDirectory>dist</outputDirectory>
 						</configuration>
 					</execution>

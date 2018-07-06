@@ -1,7 +1,7 @@
 version: '3.5'
 
 services:
-  functional-unit-commands:
+  template-commands:
     container_name: ${UNIT_NAME}-commands
     restart: on-failure:3
     ports:

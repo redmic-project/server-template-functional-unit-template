@@ -1,11 +1,12 @@
 version: '3.5'
 
 services:
-  functional-unit-commands:
-    image: registry.redmic.net/redmic-server/${UNIT_NAME}:${IMAGE_TAG:-latest}
+  template-commands:
+    image: ${IMAGE_NAME}:${IMAGE_TAG:-latest}
     environment:
-      - SPRING_PROFILES_ACTIVE
+      - COMMANDS_PORT
       - SERVICE
+      - SPRING_PROFILES_ACTIVE
       - JAVA_OPTS=-Xmx512m -Xss512m
     networks:
       - kafka-net

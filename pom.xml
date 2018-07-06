@@ -9,11 +9,11 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>es.redmic.functional-unit</groupId>
-	<artifactId>functional-unit</artifactId>
+	<groupId>es.redmic.template</groupId>
+	<artifactId>template</artifactId>
 	<packaging>pom</packaging>
 	<version>x.y.z</version>
-	<name>functional-unit</name>
+	<name>template</name>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -120,8 +120,8 @@
 	</build>
 
 	<modules>
-		<module>functional-unit-commands</module>
-		<module>functional-unit-view</module>
-		<module>functional-unit-lib</module>
+		<module>template-commands</module>
+		<module>template-view</module>
+		<module>template-lib</module>
 	</modules>
 </project>

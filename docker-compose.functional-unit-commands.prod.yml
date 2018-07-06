@@ -1,7 +1,7 @@
 version: '3.5'
 
 services:
-  functional-unit-commands:
+  template-commands:
     ports:
       - ${COMMANDS_PORT}
     networks:

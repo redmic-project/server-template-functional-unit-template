@@ -1,7 +1,7 @@
 version: '3.5'
 
 services:
-  functional-unit-view:
+  template-view:
     ports:
       - ${VIEW_PORT}
     networks:

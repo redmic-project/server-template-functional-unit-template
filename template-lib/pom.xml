@@ -8,9 +8,9 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>functional-unit-lib</artifactId>
+	<artifactId>template-lib</artifactId>
 	<packaging>jar</packaging>
-	<name>functional-unit-lib</name>
+	<name>template-lib</name>
 
 	<dependencies>
 		<!-- REDMIC -->

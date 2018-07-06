@@ -1,11 +1,12 @@
 version: '3.5'
 
 services:
-  functional-unit-view:
-    image: registry.redmic.net/redmic-server/${UNIT_NAME}:${IMAGE_TAG:-latest}
+  template-view:
+    image: ${IMAGE_NAME}:${IMAGE_TAG:-latest}
     environment:
-      - SPRING_PROFILES_ACTIVE
+      - VIEW_PORT
       - SERVICE
+      - SPRING_PROFILES_ACTIVE
       - JAVA_OPTS=-Xmx512m -Xss512m
     networks:
       - elastic-net
