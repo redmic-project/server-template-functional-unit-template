@@ -30,6 +30,8 @@ Este proyecto sirve de guía para la creación de una nueva unidad funcional (mi
 
 7. Configurar en el fichero `pom.xml` el *spring-boot-starter* adecuado para cada microservicio y añadir las dependencias deseadas.
 
-8. Actualizar la tabla inicial de estado, eliminar estas instrucciones y documentar adecuadamente.
+8. En el fichero `.gitlab-ci.yml`, modificar detalles de despliegue según sea necesario, como el valor de `STACK` o los bloques `script`, donde se pasan las variables de entorno hacia los servicios.
+
+9. Actualizar la tabla inicial de estado, eliminar estas instrucciones y documentar adecuadamente.
 
 * Para más información acceder a [Guía para desarrollar una unidad funcional](https://gitlab.com/redmic-project/server/template/functional-unit-template/wikis/home)
