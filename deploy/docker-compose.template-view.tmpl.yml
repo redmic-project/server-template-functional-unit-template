@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+  template-view:
+    image: ${IMAGE_NAME}:${IMAGE_TAG:-latest}
+    environment:
+      - VIEW_PORT
+      - SPRING_PROFILES_ACTIVE
+      - MICROSERVICE_NAME=${UNIT_NAME}-view
+      - SPRING_KAFKA_CLIENT-ID={{.Service.Name}}-{{.Task.Slot}}
+      - JAVA_OPTS=-XX:MaxRAMFraction=2
+    networks:
+      - kafka-net
+      - traefik-net
+    healthcheck:
+      test: wget --spider -q http://localhost:${VIEW_PORT}/api/${UNIT_NAME}/view/actuator/health
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 2m
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels:
+        traefik.frontend.rule: Host:${PUBLIC_HOSTNAME};PathPrefix:/api/${UNIT_NAME}/view
+        traefik.backend: ${UNIT_NAME}-view
+        traefik.port: '${VIEW_PORT}'
+      restart_policy:
+        delay: 10s
+        window: 3m
+
+networks:
+  kafka-net:
+    name: ${KAFKA_NET_NAME:-kafka-net}
+    external: true
+
+  traefik-net:
+    name: ${TRAEFIK_NET_NAME:-traefik-net}
+    external: true
