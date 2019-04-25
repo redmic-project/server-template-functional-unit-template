@@ -8,12 +8,12 @@
 | Commands test coverage | [![coverage report](https://gitlab.com/redmic-project/server/template/badges/master/coverage.svg?job=maven-build-commands)](https://gitlab.com/redmic-project/server/template/commits/master) | [![coverage report](https://gitlab.com/redmic-project/server/template/badges/dev/coverage.svg?job=maven-build-commands)](https://gitlab.com/redmic-project/server/template/commits/dev) |
 | View test coverage | [![coverage report](https://gitlab.com/redmic-project/server/template/badges/master/coverage.svg?job=maven-build-view)](https://gitlab.com/redmic-project/server/template/commits/master) | [![coverage report](https://gitlab.com/redmic-project/server/template/badges/dev/coverage.svg?job=maven-build-view)](https://gitlab.com/redmic-project/server/template/commits/dev) |
 
-Este proyecto sirve de guía para la creación de una nueva unidad funcional (microservicios `commands` y `view` y `lib` asociada).
+Este proyecto sirve de guía para la creación de una nueva unidad funcional (microservicios `commands` y `view` y `lib` asociada). Una vez hecho clone del proyecto, se aconseja eliminar el directorio .git para limpiar el historial de git y comenzar como un proyecto nuevo.
 
 1. Antes de importar el proyecto, en el fichero `pom.xml`:
 	* Reemplazar `template` por el nombre que se le quiere dar a la unidad funcional.
 	* Definir la versión de `redmic` (x.y.z) con la más reciente.
-	* Definir la versión de Spring deseada.
+	* Definir la versión del pom padre de redmic deseada.
 
 2. En los directorios `template-*`:
 	* Renombrarlos con el nombre elegido en el `pom.xml`.
