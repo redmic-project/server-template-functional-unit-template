@@ -2,9 +2,11 @@ version: '3.5'
 
 services:
   template-view:
-    image: ${IMAGE_NAME}:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAME:-registry.gitlab.com/redmic-project/server/template/functional-unit-template}:${IMAGE_TAG:-latest}
     environment:
-      - VIEW_PORT
+      - UNIT_NAME
+      - MICROSERVICE_PATH=view
+      - PORT
       - SPRING_PROFILES_ACTIVE
       - MICROSERVICE_NAME=${UNIT_NAME}-view
       - SPRING_KAFKA_CLIENT-ID={{.Service.Name}}-{{.Task.Slot}}
@@ -14,19 +16,13 @@ services:
       - kafka-net
       - redmic-net
       - traefik-net
-    healthcheck:
-      test: wget --spider -q http://localhost:${VIEW_PORT}/api/${UNIT_NAME}/view/actuator/health
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 2m
     deploy:
       mode: replicated
       replicas: 1
       labels:
         traefik.frontend.rule: Host:${PUBLIC_HOSTNAME};PathPrefix:/api/${UNIT_NAME}/view
         traefik.backend: ${UNIT_NAME}-view
-        traefik.port: '${VIEW_PORT}'
+        traefik.port: '${PORT}'
       restart_policy:
         delay: 10s
         window: 3m
