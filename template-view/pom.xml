@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
-		<groupId>es.redmic</groupId>
-		<artifactId>redmic</artifactId>
+		<groupId>es.redmic.template</groupId>
+		<artifactId>template</artifactId>
 		<version>x.y.z</version>
 	</parent>
 
@@ -14,6 +14,10 @@
 	<packaging>jar</packaging>
 	<name>template view</name>
 	<description>Template view microservice</description>
+
+	<properties>
+		<redmic.view-lib.version>0.6.0</redmic.view-lib.version>
+	</properties>
 
 	<dependencies>
 
